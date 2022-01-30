@@ -2,8 +2,8 @@ const express= require("express");
 const app = express();
 const rutasMain = require ("./routers/main")
 
-app.listen(3000,()=> {
-    console.log("El servidor  3000  esta corriendo")
+app.listen(process.env.PORT||3000, function() {
+    console.log('Servidor funcionando');
 });
 
 app.use("/",rutasMain);
